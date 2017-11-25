@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/cssreset.css" />
+		<script src="../js/jquery-3.2.1.min.js"></script>
+		<script src="../../互诺科技/js/bootstrap.js"></script>
+		<style>
+			.navbar {
+				background-color: #32a7b8;
+				margin: 0;
+				color: #FFFFFF;
+			}
+			
+			nav>div>h2{
+				float: left;
+				font-size: 24px;
+				font-weight: 600;
+				line-height: 50px;
+			}
+			nav>div>p{
+				float: right;
+				line-height: 50px;
+				background: url(../img/triangle.png)no-repeat 10px 38px;
+			}
+			.top{
+				padding: 50px 20px;
+				box-sizing: border-box;
+				text-align: center;
+				background-color: #f5f5f5;
+			}
+			.top h2{
+				font-size: 24px;
+				padding-bottom: 30px;
+			}
+			.top>div{
+				position: relative;
+			}
+			.txt{
+				font-size: 18px;
+			    line-height: 22px;
+			    width: 50%;
+			    height: 50px;
+			    text-indent: 20px;
+				border: 1px solid #CCCCCC;
+			    box-sizing: border-box;
+			    border-radius: 5px;
+			}
+			.submit{
+				    color: rgb(255, 255, 255);
+				    text-shadow: rgba(0, 0, 0, 0.4) 0px -1px 1px;
+				    font-size: 18px;
+				    height: 52px;
+				    position: absolute;
+				    top: -1px;
+				    outline: none;
+				    right: 15%;
+				    background: rgb(79, 146, 202);
+				    border-radius: 0px 5px 5px 0px;
+				    border-width: 1px solid rgb(64, 127, 179);
+				    border-image: initial;
+				   width: 11%;
+			}
+			.Artical{
+				padding: 50px 130px;
+				border-bottom: 1px dashed #CCCCCC;
+				background-color: #FFFFFF;
+			}
+			.Artical>h2{
+				font-size: 24px;
+				text-align: center;
+			}
+			.Artical>ul{
+				float: left;
+			}
+			.Artical>ol{
+				float: right;
+			}
+			.Artical li{
+				margin-top: 20px;
+				background: url(../img/artical.png) no-repeat ;
+				text-indent: 22px;
+			}
+			.Artical li>a{
+				font-size: 15px;
+				color:#32a7b8;
+			}
+			
+			.total li{
+				width: 31%;
+				height: 115px;
+				float: left;
+				margin-left: 18px;
+				margin-top: 20px;
+				text-align: center;
+				border: 1px solid #CCCCCC;
+			}
+			.total li:hover{
+				background-color: #f5f5f5;
+			}
+			h4{
+				margin-top: 30px;
+				color: #000;
+			}
+			.total li p{
+				margin-top: 15px;
+				font-size: 12px;
+			}
+			.total li a{
+				text-decoration: none;
+			}
+			.wrapper>p{
+				text-align: center;
+				margin: 30px 0;
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<!--移动端框架：zepto   17素材网  jquery插件库-->
+		<div class="wrapper">
+			<nav class="navbar navbar-default">
+				<div class="container">
+					<h2>Mailblast</h2>
+					<p>home</p>
+				</div>
+			</nav>
+			<div class="content clearfix">
+				<div class="top">
+					<h2>Frequently asked questions and support documentation for Mailblast</h2>
+					<div>
+						<input class="txt" type="text" autofocus placeholder="Search the konwledge base"/>
+						<input class="submit" type="submit" name="" id="" value="Search" />
+					</div>
+				</div>
+				<div class="Artical container">
+					<h2>Most Popular Articles</h2>
+					<ul class="col-lg-5">
+						<li class="col-lg-12"><a href="">Creating your AWS Credentials</a></li>
+						<li><a href="">How much does Mailblast cost?</a></li>
+						<li><a href="">Moving out of the Amazon Sandbox</a></li>
+						<li><a href="">What is an automation?</a></li>
+						<li><a href="">Enabling DKIM</a></li>
+						
+					</ul>
+					<ol class="col-lg-6">
+						<li><a href="">How does Mailblast handle bounces?</a></li>
+						<li><a href="">How much does AWS cost?</a></li>
+						<li><a href="">Using unsubscribe links</a></li>
+						<li><a href="">How do I create embedded Signup Forms?</a></li>
+						<li><a href="">Verifying your from email address</a></li>
+					</ol>
+				</div>
+				<ul class="total container">
+					<li>
+						<a href="">
+							<h4>Affiliate</h4>
+							<p>1 artical</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Gettimh Started</h4>
+							<p>4 articals</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Pracimg</h4>
+							<p>3 articals</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Tracking and Analttics</h4>
+							<p>2 articals</p>
+						</a>
+					</li>
+					<li>
+						<a href="">
+							<h4>Using Mailblast</h4>
+							<p>10 articals</p>
+						</a>
+					</li>
+					
+				</ul>
+
+			</div>
+			<p class="row">&copy; Mailblast 2017. Powered by Help Scout - Report this site</p>
+		</div>
+		
+	</body>
+
+</html>

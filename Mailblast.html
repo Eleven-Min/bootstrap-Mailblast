@@ -1,0 +1,413 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/bootstrap.css" />
+		<link rel="stylesheet" href="../css/cssreset.css" />
+		<style type="text/css">
+			.navbar {
+				height: 80px;
+				width: 100%;
+				z-index: 2;
+				margin-bottom: 0;
+				border: none;
+				position: fixed;
+				top: 0;
+				left: 0;
+				border-radius: 0;
+				background-color: #32a7b8;
+			}
+			
+			.active {
+				height: 50px;
+				transition: all 1s;
+				background-color: #000000;
+			}
+			
+			.navbar-brand {
+				color: #FFFFFF !important;
+				font-size: 24px;
+			}
+			
+			.navbar-collapse {
+				border: none;
+			}
+			
+			.icon-bar {
+				background-color: #ffffff;
+			}
+			
+			.navbar-right>li>a {
+				color: #ffffff !important;
+				font-size: 15px;
+			}
+			
+			.navbar-toggle {
+				border: 1px solid transparent;
+				background-color: transparent !important;
+			}
+			
+			.banner {
+				color: #FFFFFF;
+				margin-top: 80px;
+				background-color: #32a7b8;
+			}
+			
+			.banner h1 {
+				padding-top: 40px;
+				padding-bottom: 10px;
+				font-size: 55px;
+			}
+			
+			.banner>a {
+				background-color: #0a6875;
+				color: #FFFFFF;
+				margin: 30px 0;
+				padding: 8px 40px;
+			}
+			
+			.banner>div {
+				width: 80%;
+				margin: 0 auto;
+			}
+			
+			.content>h1 {
+				margin-top: 70px;
+				letter-spacing: 2px;
+				font-weight: 900;
+				font-size: 50px;
+			}
+			
+			.content .tit {
+				margin: 10px 145px;
+				font-size: 20px;
+				font-weight: 400;
+			}
+			
+			.content>p>span {
+				color: #68becb;
+			}
+			
+			hr {
+				border: 1px solid #68becb;
+				width: 200px;
+				margin-top: 25px;
+			}
+			
+			.left {
+				box-sizing: border-box;
+				letter-spacing: 1px;
+			}
+			
+			.right {
+				padding: 70px;
+				box-sizing: border-box;
+			}
+			
+			.left>div {
+				padding: 150px 128px;
+			}
+			
+			ul li h3 {
+				margin: 15px 0;
+				font-size: 25px;
+				font-weight: 500;
+			}
+			
+			ul li p {
+				font-weight: 500;
+			}
+			
+			.boo {
+				color: #FFFFFF;
+				font-size: 15px;
+				margin-top: 10px;
+				background-color: #32a7b8;
+			}
+			
+			.content>h3 {
+				margin-bottom: 70px;
+				margin-top: 20px;
+			}
+			
+			.p {
+				opacity: 0.5;
+			}
+			
+			.footer {
+				background-color: #191e2b;
+				position: relative;
+			}
+			
+			.footer-area {
+				padding: 30px 0;
+				box-sizing: border-box;
+			}
+			
+			.footer-area h5 {
+				margin: 5px 0 10px;
+				font-family: Source Sans Pro, sans-serif;
+				font-size: 24px;
+				color: #ffffff;
+				font-weight: 400;
+			}
+			
+			.footer-area p {
+				padding: 10px;
+			}
+			
+			.b {
+				width: 200px;
+				display: block;
+				margin: 40px auto;
+				border: 1px solid #32a7b8;
+			}
+			
+			footer a {
+				transition: all 1s;
+			}
+			
+			footer a:hover {
+				color: #ffffff;
+			}
+			
+			.btn-facebook,
+			.btn-twitter {
+				color: #ffffff;
+				margin-right: 0;
+				font-weight: 900;
+			}
+			
+			.msg {
+				width: 60px;
+				height: 60px;
+				display: block;
+				float: right;
+				border-radius: 50%;
+				position: absolute;
+				bottom: 20px;
+				right: 30px;
+				font-size: 20px;
+				font-weight: 400;
+				line-height: 45px;
+			}
+			
+			.bb {
+				width: 270px;
+				height: 400px;
+				position: absolute;
+				right: 30px;
+				bottom: 20px;
+				display: none;
+				background-color: #FFFFFF;
+			}
+			
+			.bb>.top {
+				width: 100%;
+				height: 100px;
+				background-color: #428bca;
+			}
+		</style>
+		<script>
+			window.onload = function() {
+				var btn = document.getElementsByClassName("msg")[0];
+				var show = document.getElementsByClassName("bb")[0];
+				var navbr = document.getElementsByClassName("navbr")[0];
+				var scrollH = document.documentElement.scrollTop || document.body.scrollTop;
+				
+				var m = 0
+				btn.onclick = function() {
+					m++;
+					if(m == 1) {
+						show.style.display = "block";
+
+					} else {
+						m = 0
+						show.style.display = "none";
+					}
+					console.log(m)
+				}
+			}
+//console.log(scrollH)
+			/*function a() {
+				if(parseInt(scrollH) > 150) {
+					navbr.style.backgroundColor = "#000"
+				}
+			}
+			a()*/
+		</script>
+	</head>
+
+	<body>
+		<div class="wrapper">
+			<nav class="navbar navbar-default">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				        <span class="sr-only"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+				        <span class="icon-bar"></span>
+			      	</button>
+						<a class="navbar-brand" href="#">Mailblast</a>
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="Pricing.html">Pricing</a>
+							</li>
+							<li>
+								<a href="Docs.html">Docs</a>
+							</li>
+							<li>
+								<a href="login.html">Login</a>
+							</li>
+							<li>
+								<a href="Sign up.html">Signup</a>
+							</li>
+						</ul>
+					</div>
+					<!-- /.navbar-collapse -->
+				</div>
+				<!-- /.container-fluid -->
+			</nav>
+			<div class="banner container-fluid text-center">
+				<h1>Mailblast</h1>
+				<p>Email Marketing on a budget using Amazon SES</p>
+				<a href="" class="btn">Start for Free</a>
+				<div>
+					<img class="img-responsive" src="../img/01.png" alt="" />
+				</div>
+			</div>
+			<div class="content text-center">
+				<h1>Simple Email Marketing</h1>
+				<p class="tit">Mailblast makes sending emails simple and cheap using Amazon's <span>Simple Email sevice</span> Save money and time withoutsacrificing deliverability </p>
+				<hr />
+				<h1>Features</h1>
+				<ul class="text-center">
+					<li class="row">
+						<div class="left col-lg-5">
+							<div>
+								<h3>List Management</h3>
+								<p>Upload and manege your subscriber lists online. Easy to use filters and import functionality make management a breeze </p>
+							</div>
+						</div>
+						<div class="right col-lg-6">
+							<img class="img-responsive" src="../img/b1.png" />
+						</div>
+					</li>
+					<hr />
+					<li class="row">
+						<div class="left col-lg-5">
+							<div>
+								<h3>Send Campaigns</h3>
+								<p>Creat,test and schedule campaigns using an easy to use wzard.</p>
+							</div>
+						</div>
+
+						<div class="right col-lg-6"><img class="img-responsive" src="../img/b1.png" /></div>
+					</li>
+					<hr />
+					<li class="row">
+						<div class="left col-lg-5">
+							<div>
+								<h3>Detailed Reports</h3>
+								<p>See derailed reports on every campaign, Bounces and complagints are automatically filtered for future campaigns.</p>
+							</div>
+
+						</div>
+						<div class="right col-lg-6">
+							<img class="img-responsive" src="../img/b1.png" />
+
+						</div>
+					</li>
+					<hr />
+					<li class="row">
+						<div class="left col-lg-5">
+							<div>
+								<h3>Marjeting Automation</h3>
+								<p>Send scheduled automated emails to users who sign up to your list</p>
+							</div>
+
+						</div>
+
+						<div class="right col-lg-6"><img class="img-responsive" src="../img/b1.png" /></div>
+					</li>
+					<hr />
+					<li class="row">
+						<div class="left col-lg-5">
+							<div>
+								<h3>Signup Forms</h3>
+								<p>Embed Signup forms on your website t drive subscribers to your list.</p>
+							</div>
+
+						</div>
+
+						<div class="right col-lg-6"><img class="img-responsive" src="../img/b1.png" /></div>
+					</li>
+					<hr />
+				</ul>
+				<a href="" class="btn boo">Start with Free Plan</a>
+				<p class="p">1,000 Subscribers. Unlimited Emails.</p>
+				<h3 class="p">Does not include Amazon SRS fees,(2,000 free emails/day/) 0.10$/1000 emails after.</h3>
+				<hr />
+			</div>
+			<div class="footer">
+				<footer class="footer-area">
+					<ul class="container text-center">
+						<li class="col-sm-3">
+							<h5>Quick Links</h5>
+							<p>
+								<a href="">Api Docs</a>
+							</p>
+							<p>
+								<a href="">Pricing</a>
+							</p>
+						</li>
+						<li class="col-sm-3">
+							<h5 class="">Help</h5>
+							<p>
+								<a href="">contact@mailblast.io</a>
+							</p>
+							<p>
+								<a href="">Documentation</a>
+							</p>
+						</li>
+						<li class="col-sm-3">
+							<h5>Legal</h5>
+							<p>
+								<a href="">Terms of Service</a>
+							</p>
+							<p>
+								<a href="">Privacy Policy</a>
+							</p>
+						</li>
+						<li class="col-sm-3">
+							<h5>Social</h5>
+							<div class="row text-center">
+								<a class="btn btn-primary btn-social-icon btn-facebook btn-lg col-lg-6" href="https://www.facebook.com/MailblastIO">Fb</a>
+								<a class="btn btn-primary btn-social-icon btn-twitter btn-lg col-lg-6" href="https://twitter.com/MailblastIO">Tw</a>
+							</div>
+						</li>
+					</ul>
+					<div class="bb">
+						<div class="top"></div>
+					</div>
+					<span class="msg btn btn-primary text-center">客服</span>
+				</footer>
+			</div>
+	</body>
+<script src="../js/bootstrap.js"></script>
+<script src="../js/jquery-3.2.1.min.js"></script>
+<!--  <script>
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script> -->
+</html>
